@@ -58,6 +58,9 @@ class RedisConnection():
         self.conn.hset("accepted_orders", key=order_id, value=merged_json)
         self.conn.hdel("pending_orders", order_id)
 
+    def delete_order(self, order_id):
+        self.conn.hdel("pending_orders", order_id)
+
 
 _redis = None
 
