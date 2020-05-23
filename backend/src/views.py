@@ -143,10 +143,10 @@ def edit_order(order_id):
                     return json.dumps(return_dict), 400
                 else:
                     if(model._redis.edit_order(order_id, incoming_dict))
-                        return_dict = {
-                            "message": "Your order has been updated successfully."
-                        }
-                        return json.dumps(return_dict), 200
+                    return_dict = {
+                        "message": "Your order has been updated successfully."
+                    }
+                    return json.dumps(return_dict), 200
                     else:
                         return_dict = {
                             "message": "There was an error updating your order."
