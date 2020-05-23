@@ -89,3 +89,22 @@ def accept_order():
             "message": "JSON not received."
         }
         return json.dumps(return_dict), 400
+
+@api_bp.route("/delete_order", mehtods=["GET"])
+def show_pending():
+    return json.dumps(model._redis.get_all_pending())
+
+
+@api_bp.route("/delete_order/<order_id>", methods=["GET", "POST"])
+def delete_order(order_id):
+    if model._redis.valid_order(order_id) is False:
+        return_dict = {
+            "message": "Invalid Order ID."
+        }
+        return json.dumps(return_dict), 404
+    else:
+        model._redis.delete_order(order_id)
+        return_dict = {
+            "message": "Your order has been deleted successfully."
+        }
+        return json.dumps(return_dict)
