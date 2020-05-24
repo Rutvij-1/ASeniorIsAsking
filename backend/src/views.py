@@ -118,7 +118,7 @@ def view_order(order_id):
             return json.dumps(model._redis.get_particular_done(order_id)), 200
         else:
             return json.dumps(model._redis.get_particular_pending(order_id)), 200
-    else:
+
         return_dict = {
             "message": "Invalid Order ID."
         }
@@ -152,6 +152,7 @@ def edit_order(order_id):
                             "message": "There was an error updating your order."
                         }
                         return json.dumps(return_dict), 203
+
             else:
                 return_dict = {
                     "message": "JSON not received."
