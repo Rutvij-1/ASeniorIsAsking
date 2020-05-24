@@ -101,6 +101,32 @@ class RedisConnection():
             return False
 
 
+    def is_orderer_json_valid(self, incoming_dict):
+        print("got till here")
+        required_keys = ["name", "Items", "contact"]
+        for key in required_keys:
+            if key not in incoming_dict:
+                return False
+        if len(incoming_dict["Items"]) <= 0:
+            return False
+        return True
+    def is_acceptor_json_valid(self, incoming_dict):
+        required_keys = ["acceptor_name", "acceptor_contact", "order_id"]
+        for key in required_keys:
+            if key not in incoming_dict:
+                return False
+        return True
+
+    def delete_order(self, order_id):
+        return self.conn.hdel("pending_orders", order_id)
+
+    def edit_order(self, order_id, updated_json):
+        if(self.conn.hdel("pending_orders", order_id)):
+            return self.conn.hset("pending_orders", key=order_id, value=updated_json)
+        else:
+            return False
+
+          
 _redis = None
 
 
