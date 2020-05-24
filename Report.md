@@ -20,3 +20,9 @@ Since this app was built under time pressure, we were able to add limited featur
 * We would set this app on a cloud based server, or if possible IIIT server.
 * We would add CAS authentication to restrict this app for IIIT use only.
 * We would make an android and ios app to make it easier for people to order and accept orders.
+
+## Other Potential Uses
+
+The technology behind this app can be used for other purposes too. Some of them are:
+
+1. You live in a city and you need groceries, but a lockdown is in effect. You would like to avoid leaving your home whenever possible, like a responsible citizen.<br>A lot of people live in your neighbourhood because, well you live in a city. So why not ask someone to get your groceries for you?<br>But how would you know who is out buying groceries and who is enjoying their afternoon nap?<br>This is where this app can come in. You just post a request for whatever groceries you need urgently, and anyone who already is out of their home or is planning to go out soon can get you your groceries.<br>You as a young and healthy person may not understand the importance of this app. But now imagine you are an old person living alone. You are already scared because Covid-19 is fatal for you, and now you don't have food to eat. This app can relieve you of a lot of your problems.
