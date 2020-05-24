@@ -2,7 +2,7 @@
 
 It's past midnight. You're hungry. You're grumpy. You want nothing but food. But... you're lazy too. What would you not do for a Tawa Bonda or a Shawarma? If only you knew which fachcha is already out there at DLF... Inspired from the 3am chats on the UG2k19 WhatsApp Groups, we present to you the only app you'll ever need to fulfill your heart's desire of having that one last meal before your regular 3-hour sleep.
 
-<img src="./readme_media/screenshot.gif" width="100%"/>
+<img src="./readme_media/screenshot.gif" height="450" width="100%"/>
 
 ### Backend
 
